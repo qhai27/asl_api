@@ -1,2 +1,5 @@
 flask
-requests
+tensorflow
+opencv-python
+numpy
+Pillow
