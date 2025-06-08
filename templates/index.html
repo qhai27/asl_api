@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ASL Recognition</title>
+  </head>
+  <body>
+    <h1>Upload Gambar ASL</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" required>
+      <input type="submit" value="Predict">
+    </form>
+
+    {% if filename %}
+      <h2>Imej Dimuat Naik:</h2>
+      <img src="{{ url_for('static', filename='uploads/' + filename) }}" height="200"><br>
+    {% endif %}
+
+    {% if prediction %}
+      <h2>Huruf Dijangka:</h2>
+      <p style="font-size: 24px;">{{ prediction }}</p>
+    {% endif %}
+  </body>
+</html>
